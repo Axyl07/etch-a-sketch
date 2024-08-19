@@ -24,12 +24,21 @@ function createGrid(row,col){
 
             row.appendChild(col);
             col.addEventListener('mouseover', () => {
-                col.style.backgroundColor = 'black';
+                if (!allBlack.checked) {
+                    max = 255
+                    let red = Math.floor(Math.random() * max);
+                    let blue = Math.floor(Math.random() * max);
+                    let green = Math.floor(Math.random() * max);
+                    // "rgb("+red+", "+blue+", "+green+")"
+                    col.style.backgroundColor = "rgb("+red+", "+blue+", "+green+")";
+                }else col.style.backgroundColor = "black";
             })
         }
     }
 }
 createGrid(16,16);
+
+const allBlack = document.querySelector('#black');
 
 
 const buttonDiv = document.querySelector("#buttonDiv");
@@ -43,7 +52,7 @@ resetButton.addEventListener('click', () => {
     let newRow = prompt("Enter number of rows (2->100)");
     let newCol  = prompt("Enter number of columns(2->100)");
     if(newRow!=newCol) alert("Values of Row and Column must be equal for ideal result")
-    if (newRow <100 && newCol < 100) {
+    if (newRow <=100 && newCol <= 100) {
         createGrid(newRow,newCol);
     }else alert("Don't use values over 100");
 })
