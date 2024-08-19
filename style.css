@@ -9,6 +9,12 @@
 
 }
 
+#buttonDiv{
+    display: flex;
+    
+    font-size: 25px;
+}
+
 /* #row,#col{
     box-sizing: border-box;
     flex: 1;

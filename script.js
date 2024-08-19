@@ -29,18 +29,23 @@ function createGrid(row,col){
         }
     }
 }
-createGrid(100,100);
+createGrid(16,16);
 
 
 const buttonDiv = document.querySelector("#buttonDiv");
-const btn = document.createElement("button");
-btn.textContent = 'Change Grid';
-btn.addEventListener('click', () => {
-    let newRow = prompt("Enter number of rows");
-    let newCol  = prompt("Enter number of columns");
-     createGrid(newRow,newCol)
-    // container.removeChild(row);
-    // container.removeChild(col);
+const resetButton = document.createElement("button");
+resetButton.textContent = 'Reset';
+resetButton.addEventListener('click', () => {
+        while (container.firstChild) {
+            container.removeChild(container.firstChild)
+        }
+        alert ("How to Use : For 16x16 grid enter No. of Rows = 16 and No. of Cols = 16")
+    let newRow = prompt("Enter number of rows (2->100)");
+    let newCol  = prompt("Enter number of columns(2->100)");
+    if(newRow!=newCol) alert("Values of Row and Column must be equal for ideal result")
+    if (newRow <100 && newCol < 100) {
+        createGrid(newRow,newCol);
+    }else alert("Don't use values over 100");
 })
 
-buttonDiv.appendChild(btn);
+buttonDiv.appendChild(resetButton);
