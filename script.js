@@ -1,8 +1,4 @@
 
-
-
-
-
 const container = document.querySelector("#container");
 function createGrid(row,col){
     for (let index = 0; index < row; index++) {
@@ -24,21 +20,28 @@ function createGrid(row,col){
 
             row.appendChild(col);
             col.addEventListener('mouseover', () => {
-                if (!allBlack.checked) {
+                if (rainbow.checked) {
                     max = 255
                     let red = Math.floor(Math.random() * max);
                     let blue = Math.floor(Math.random() * max);
                     let green = Math.floor(Math.random() * max);
                     // "rgb("+red+", "+blue+", "+green+")"
                     col.style.backgroundColor = "rgb("+red+", "+blue+", "+green+")";
-                }else col.style.backgroundColor = "black";
+                    col.style.opacity = "0.1";
+                    col.style.opacity = parseFloat(col.style.opacity)+0.1;
+                    console.log(col.style.backgroundColor);
+                }else {
+                    col.style.backgroundColor = "black";
+                    col.style.opacity = "0.1";
+                    col.style.opacity = "parseFloat(col.style.opacity)+0.1";
+                }
             })
         }
     }
 }
 createGrid(16,16);
 
-const allBlack = document.querySelector('#black');
+const rainbow = document.querySelector('#rainbow');
 
 
 const buttonDiv = document.querySelector("#buttonDiv");
