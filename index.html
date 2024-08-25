@@ -1,30 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Etch-A-Sketch</title>
-    <link rel="stylesheet" href="./style.css">
-</head>
-<body>
-    <h1>Etch-A-Sketch</h1>
-<div id="buttonDiv"> Press this Button to Change the dimensions : </div>
-<label for="accept">
-    <input type="checkbox" id="rainbow" name="accept" value="yes"> Random Colors ?
-    <input type="checkbox" id="hover" name="accept1" value="yes"> Change to hover mode ?
-    <input type="checkbox" id="eraser" name="accept2" value="yes"> Erase Mode
-    <input type="color" id="colorPicker" name="Color Picker"/> Color Picker
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
 
+    <div id="header">
+        <h1>Etch-A-Sketch</h1>
+    </div>
 
- </label>
+    <div id="main-div">
+      <div id="left">
+        <div id="all-buttons">
+          <button id="change-size" Change size></button>
+          <button id="clear">clear</button>
+          <input type="checkbox" id="rainbow" name="accept" value="yes" />
+          Random Colors ?
+          <input type="checkbox" id="click" name="accept1" value="yes" /> Change
+          to click mode ?
+          <input type="checkbox" id="eraser" name="accept2" value="yes" /> Erase
+          Mode <input type="color" id="colorPicker" name="Color Picker" /> Color
+          Picker
+          <input type="checkbox" id="darkening" name="dark" value="yes" />
+          Darkening Effect
+        </div>
+      </div>
 
-
-    <div id="container"></div>
-    
-
-
-
+      <div id="right">
+        <div id="container"></div>
+      </div>
+    </div>
 
     <script src="./script.js"></script>
-</body>
+  </body>
 </html>
