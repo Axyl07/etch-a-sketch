@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Etch-A-Sketch</title>
     <link rel="stylesheet" href="./style.css" />
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+      </style>
   </head>
   <body>
 
@@ -17,16 +20,28 @@
         <div id="all-buttons">
           <button id="change-size" Change size></button>
           <button id="clear">clear</button>
-          <input type="checkbox" id="rainbow" name="accept" value="yes" />
-          Random Colors ?
-          <input type="checkbox" id="click" name="accept1" value="yes" /> Change
-          to click mode ?
-          <input type="checkbox" id="eraser" name="accept2" value="yes" /> Erase
-          Mode <input type="color" id="colorPicker" name="Color Picker" /> Color
-          Picker
-          <input type="checkbox" id="darkening" name="dark" value="yes" />
-          Darkening Effect
+            <div id="rainbow-box">
+              <input type="checkbox" id="rainbow" name="accept" value="yes" />
+              <label for="rainbow">Random colors ?</label>
+            </div>
+     
+            <div id="click-box">
+              <input type="checkbox" id="click" name="accept1" value="yes" />
+              <label for="click">Change to click mode ?</label>
+            </div>
+          
+            <div id="eraser-box">
+              <input type="checkbox" id="eraser" name="accept2" value="yes" />
+              <label for="eraser">Erase Mode</label>
+            </div>
+          
+          <div id="colorPicker-box">
+            <input type="color" id="colorPicker" name="Color Picker" />
+            <label for="color">Color Picker</label>  
+          </div>
         </div>
+        <!-- <input type="checkbox" id="darkening" name="dark" value="yes" />
+        Darkening Effect -->
       </div>
 
       <div id="right">

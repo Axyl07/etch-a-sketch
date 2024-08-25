@@ -20,13 +20,8 @@ function createGrid(row,col){
             col.style.flex = '1';
             col.className = 'col';
             col.style.backgroundColor = 'white'
-            // col.style.border = '1px dotted black'
-            // col.style.margin = '1px'
-            // col.style.borderRadius = '2px'
             row.appendChild(col);
-            //main event for coloring the cells 
-            col.addEventListener('mouseover', (e) => {
-                if (darkening.checked) {  
+            col.addEventListener('mouseover', (e) => { 
                 if(click.checked){
                 if(e.buttons){
                 if (rainbow.checked) {
@@ -38,14 +33,12 @@ function createGrid(row,col){
                         let blue = Math.floor(Math.random() * max);
                         let green = Math.floor(Math.random() * max);
                         col.style.backgroundColor = "rgb("+red+", "+blue+", "+green+")";
-                        // col.style.opacity = "0.1"
-                        // col.style.opacity += "0.1";
+      
                         
                     }
                 }else {
                     col.style.backgroundColor = `${colorPicker.value}`;
-                    // col.style.opacity = "0.1"
-                    // col.style.opacity += "0.1";
+      
                     if (eraser.checked) {
                         col.style.backgroundColor = 'white';
                     }else col.style.backgroundColor = `${colorPicker.value}`;
@@ -75,7 +68,7 @@ function createGrid(row,col){
                 
             }
         }
-    }
+    
             })
       
                         }
@@ -95,7 +88,7 @@ function createGrid(row,col){
                     let size = prompt("Enter size of grid (2->100)");
                     if (size <=100) {
                         createGrid(size,size);
-                    }else alert("Don't use values over 100 or smaller than 2");
+                    }else alert("Don't use values over 100 or smaller than 2 \nRefresh the page to enter values again");
                 })
                 
                 
