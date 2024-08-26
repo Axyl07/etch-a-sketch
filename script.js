@@ -1,4 +1,5 @@
 const rainbow = document.querySelector('#rainbow');
+rainbow.textContent = "Random Colors ?"
 const hover = document.querySelector('#click');
 const colorPicker = document.querySelector('#colorPicker');
 const eraser = document.querySelector('#eraser');
