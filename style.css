@@ -76,7 +76,7 @@ body{
     border-radius: 1%;
 
 }
-div:hover{
+#container:hover{
 cursor:crosshair;
 }
 
