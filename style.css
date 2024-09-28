@@ -1,6 +1,4 @@
 
-/* // <uniquifier>: Use a unique and descriptive class name
-// <weight>: Use a value from 200 to 1000 */
 .nunito-font {
   font-family: "Nunito", sans-serif;
   font-optical-sizing: auto;
@@ -80,8 +78,13 @@ button{
     padding: 10px;
     background-color: #eebbc3;
     color: #232946;
-    border-radius: 2%;
-    font-size: 25px;}
+    border-radius: 25px;
+    font-size: 25px;
+}
+
+button:hover{
+    border: 5px solid rgb(78, 211, 252);
+}
 label{
     display: flex;
     justify-content: space-between;
