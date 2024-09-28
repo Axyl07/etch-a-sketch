@@ -1,4 +1,7 @@
-
+*{
+    font-family: Nunito;
+    font-weight: 800;
+}
 .nunito-font {
   font-family: "Nunito", sans-serif;
   font-optical-sizing: auto;
@@ -8,10 +11,16 @@
 
 h1{
     font-size: 40px;
+    
 }
 h1:hover{
-    color:  rgb(78, 211, 252);
-    cursor:grab
+    
+    color: #1ef7ae;
+    /* box-shadow: 0 0 20px rgb(232, 248, 3);  */
+    /* glow effect */
+    transition: box-shadow 0.2s ease-in-out;
+    cursor:grab;
+    
 }
 body{
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -90,8 +99,11 @@ button{
 }
 
 button:hover{
-    border: 5px solid rgb(78, 211, 252);
-    background-color: #f09eaa;
+    border: 3px solid rgb(78, 211, 252);
+    background-color: #1ef7ae;
+    box-shadow: 0 0 20px rgb(232, 248, 3); /* glow effect */
+    transition: box-shadow 0.2s ease-in-out;
+    
 }
 label{
     display: flex;
